@@ -16,7 +16,7 @@
             </div>
             <div class="mb-3 form-check">
                 <label for="sinopseInput" class="form-label">Sinopse:</label>
-  <textarea class="form-control" id="sinopseInput" rows="3"></textarea>
+                <textarea class="form-control" id="sinopseInput" rows="3"></textarea>
             </div>
             <div class="mb-3 form-check">
                 <label for="capaInput" class="form-label">Capa:</label>
