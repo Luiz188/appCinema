@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\cadastroFilme;
 use App\Http\Controllers\cadastroFuncionario;
+use App\Http\Controllers\cadastroSala;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/', function () {
 Route::get('/cadastro-Filme',[cadastroFilme::class,'buscaCadastroFilme']);
 
 Route::get('/cadastro-Funcionario',[cadastroFuncionario::class,'buscaCadastroFuncionario']);
+
+Route::get('/cadastro-Sala',[cadastroSala::class,'buscaCadastroSala']);
