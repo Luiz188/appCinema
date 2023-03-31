@@ -34,7 +34,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Funcionário</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{url('/cadastro-Funcionario')}}">Cadastrar</a></li>
+                    <li><a class="dropdown-item" href="{{url('/cadastro-funcionario')}}">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="#">Pesquisar</a></li>
                     <li><a class="dropdown-item" href="#">Gerenciar</a></li>
                 </ul>
