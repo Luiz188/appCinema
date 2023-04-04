@@ -7,7 +7,6 @@
                 <label for="nomeInput" class="form-label">Nome:</label>
                 <input type="text" name="nomefun" class="form-control" id="nomeInput" >
             </div>
-
             <div class="mb-3 form-check">
                 <label for="emailInput" class="form-label">Email:</label>
                 <input type="email" name="emailfun" class="form-control" id="emailInput">

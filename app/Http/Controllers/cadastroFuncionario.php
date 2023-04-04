@@ -7,6 +7,7 @@ use App\Models\Funcionario;
 
 class cadastroFuncionario extends Controller
 {
+    
     public function buscaCadastroFuncionario(){
         return View('cadastroFuncionario');
     }

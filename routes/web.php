@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/cadastro-Filme',[cadastroFilme::class,'buscaCadastroFilme']);
+Route::get('/cadastro-Filme',[cadastroFilme::class,'buscaCadastroFilme'])->name('busca-cadastro-filme');
+
+Route::post('/cadastro-Filme',[cadastroFilme::class,'cadastrarFilme'])->name('cadastro-filme');
 
 Route::get('/cadastro-Sala',[cadastroSala::class,'buscaCadastroSala']);
 
