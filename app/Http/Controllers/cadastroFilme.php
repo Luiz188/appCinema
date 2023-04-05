@@ -19,11 +19,11 @@ class cadastroFilme extends Controller
                 'atoresfilme' => 'string|required',
                 'datalancamentofilme' => 'string|required',
                 'sinopsefilme' => 'string|required',
-                'capafilme' => 'string|required'
+                'capafilme' => 'string'
             ]
         ); 
         
         Filme::create($dadosFilme);
-        return Redirect::route('cadastro-Filme');
+        return Redirect::route('cadastro-filme');
     }
 }
