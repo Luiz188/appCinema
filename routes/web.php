@@ -29,3 +29,5 @@ Route::get('/cadastro-Sala',[cadastroSala::class,'buscaCadastroSala']);
 Route::get('/cadastro-funcionario',[cadastroFuncionario::class,'buscaCadastroFuncionario'])->name('busca-cadastro-funcionario');
 
 Route::post('/cadastro-funcionario',[cadastroFuncionario::class,'cadastrarFuncionario'])->name('cadastro-funcionario');
+
+Route::get('/gerenciador-funcionario',[cadastroFuncionario::class,'buscarFuncionario'])->name('gerenciar-funcionario');
