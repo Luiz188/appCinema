@@ -32,4 +32,4 @@ Route::get('/cadastro-funcionario',[funcionarioController::class,'buscaCadastroF
 
 Route::post('/cadastro-funcionario',[funcionarioController::class,'cadastrarFuncionario'])->name('cadastro-funcionario');
 
-Route::get('/gerenciador-funcionario',[funcionarioController::class,'buscarFuncionario'])->name('gerenciar-funcionario');
+Route::get('/gerenciar-funcionario',[funcionarioController::class,'MostrarGerenciadorFuncionario'])->name('gerenciar-funcionario');

@@ -2,36 +2,36 @@
 
 @section('content')
 
-<div class="container mt-3">
+<div class="container mt-5">
 
-<div class="mb-3 row">
+<form method="get" action="{{route('gerenciar-funcionario')}}">
   <div class="mb-3 row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Pesquisar:</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword" placeholder="Por Nome">
+    <label for="inputPesquisar" class="col-sm-2 col-form-label">Pesquisar:</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" name="nomefun" id="inputPesquisar" placeholder="Digite o nome do funcionário" >
     </div>
-</div>
+    <div class="col-sm-2"> <button type="submit" class="btn btn-outline-primary">Pesquisar</button> </div>
+  </div>
+
+</form>
 
 <table class="table table-dark table-hover">
   <thead>
-    <tr>
-      <th scope="col">Código</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Email</th>
-      <th scope="col">Alterar</th>
-      <th scope="col">Excluir</th>
+
     </tr>
   </thead>
   <tbody>
+    @foreach($dadosfuncionario as $dadosfuncionarios)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto@email.com</td>
-      <td>X</td>
-      <td>X</td>
+      <th scope="row">{{$dadosfuncionarios->id}}</th>
+      <td>{{$dadosfuncionarios->nomefun}}</td>
+      <td>{{$dadosfuncionarios->senhafun}}</td>
+      <td>{{$dadosfuncionarios->emailfun}}</td>
+      <td>{{$dadosfuncionarios->whatsappfun}}</td>  
+      <td>{{$dadosfuncionarios->cpffun}}</td>  
     </tr>
-    <tr>
 
+   @endforeach
   </tbody>
 </table>
 </div>
