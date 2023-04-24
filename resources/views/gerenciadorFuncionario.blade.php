@@ -17,11 +17,18 @@
 
 <table class="table table-dark table-hover">
   <thead>
-
+    <tr>
+      <td>Codígo</td>
+      <td>Nome</td>
+      <td>Senha</td>
+      <td>Email</td>
+      <td>Whatsapp</td>
+      <td>CPF</td>
     </tr>
   </thead>
   <tbody>
     @foreach($dadosfuncionario as $dadosfuncionarios)
+    
     <tr>
       <th scope="row">{{$dadosfuncionarios->id}}</th>
       <td>{{$dadosfuncionarios->nomefun}}</td>
