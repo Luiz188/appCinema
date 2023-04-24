@@ -27,6 +27,9 @@
     </tr>
   </thead>
   <tbody>
+    @if(empty($_GET['nomefun']))
+
+    @else
     @foreach($dadosfuncionario as $dadosfuncionarios)
     
     <tr>
@@ -42,4 +45,5 @@
   </tbody>
 </table>
 </div>
+@endif
 @endsection
