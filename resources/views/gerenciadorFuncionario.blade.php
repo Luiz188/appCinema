@@ -28,7 +28,6 @@
   </thead>
   <tbody>
     @if(empty($_GET['nomefun']))
-
     @else
     @foreach($dadosfuncionario as $dadosfuncionarios)
     
