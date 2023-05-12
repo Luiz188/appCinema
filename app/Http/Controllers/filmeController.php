@@ -64,7 +64,7 @@ class filmeController extends Controller
     }
 
     public function AlterarBancoFilme(Filme $registrosFilme){
-        $dadosfilme =$request->validate([
+        $dadosfilme = $request->validate([
             'nomefilme' => 'string|required',
             'atoresfilme'=> 'string|required',
             'dtlancamentofilme' => 'string|required',

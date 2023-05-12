@@ -34,37 +34,18 @@
       <th scope="row">{{$dadosfilme->id}}</th>
       <td>{{$dadosfilme->nomefilme}}</td>
       <td>{{$dadosfilme->atoresfilme}}</td>
-      <td><a href="{{route('mostrar-filme',$dadosfilme->id)}}">Alterar</a></td>
       <td>
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalAlterarFil-{{$dadosfilme->id}}"> Alterar</button>
+      </td>
+      <td>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteFil-{{$dadosfilme->id}}">
         Excluir
       </button>
       </td>
     </tr>
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Cuidado!</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Deseja mesmo excluir?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <form method="post" action="{{route('apagar-filme',$dadosfilme->id)}}">
-        @method('delete')
-        @csrf 
-        <button type="submit" class=" btn btn-danger">Excluir</button>
-      </form>
-      </div>
-    </div>
-  </div>
-</div>
-
+    @include('modal.FilmeAlterar')
+    @include('modal.FilmeDeletar')
 
    @endforeach
   </tbody>
