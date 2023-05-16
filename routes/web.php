@@ -32,12 +32,12 @@ Route::get('/cadastro-funcionario',[funcionarioController::class,'buscaCadastroF
 Route::post('/cadastro-funcionario',[funcionarioController::class,'cadastrarFuncionario'])->name('cadastro-funcionario');
 Route::get('/gerenciar-funcionario',[funcionarioController::class,'MostrarGerenciadorFuncionario'])->name('gerenciar-funcionario');
 Route::get('/alterar-funcionario/{registroFuncionario}',[funcionarioController::class,'MostrarRegistroFuncionario'])->name('mostrar-funcionario');
-Route::put('/gerenciar-funcionario/{registroFuncionario}',[funcionarioController::class,'AlterarBancoFuncionario'])->name('alterar-banco-funcionario');
+Route::put('/gerenciar-funcionario/{registrosFuncionarios}',[funcionarioController::class,'AlterarBancoFuncionario'])->name('alterar-banco-funcionario');
 Route::delete('/gerenciar-funcionario/{registrosFuncionarios}',[funcionarioController::class, 'ApagarFuncionario'])->name('apagar-funcionario');
 
 
 
 Route::get('/gerenciar-filme',[filmeController::class,'MostrarGerenciadorFilme'])->name('gerenciar-filme');
-Route::delete('/gerenciar-filme/{registrosFilme}',[filmeController::class, 'ApagarFilme'])->name('apagar-filme');
+Route::delete('/gerenciar-filme/{registrosFilme}',[filmeController::class,'ApagarFilme'])->name('apagar-filme');
 Route::get('/alterar-filme/{registrosFilme}',[filmeController::class,'MostrarRegistroFilme'])->name('mostrar-filme');
-Route::put('/garenciar-filme/{registrosFilme}',[filmeController::class,'AlterarBancoFilme'])->name('alterar-banco-filme');
+Route::put('/gerenciar-filme/{registrosFilme}',[filmeController::class,'AlterarBancoFilme'])->name('alterar-banco-filme');

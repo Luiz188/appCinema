@@ -56,15 +56,15 @@ class funcionarioController extends Controller
         return view('xxx',['registrosFuncionarios'=>$registrosFuncionarios]);
     }
 
-    public function AlterarBancoFuncionario(Funcionario $registrosFuncionarios){
-     $dadosfuncionarios =$request->validate([
+    public function AlterarBancoFuncionario(Funcionario $registrosFuncionarios, Request $request){
+     $dadosfuncionario =$request->validate([
         'emailfun'=>'string|required',
         'nomefun'=>'string|required',
         'senhafun'=>'string|required',
         'whatsappfun'=>'string|required',
         'cpffun'=>'string|required'
      ]);
-     $registrosFuncionarios->fill($dadosfuncionarios);
+     $registrosFuncionarios->fill($dadosfuncionario);
      $registrosFuncionarios->save();
 
     return Redirect::route('gerenciar-funcionario');

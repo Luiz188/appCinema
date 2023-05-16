@@ -7,8 +7,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-dark">
-      <form method = "post" action="{{route('cadastro-filme')}}">
-    @csrf
+      <form method = "post" action="{{route('alterar-banco-filme',$dadosfilme->id)}}" enctype = "multipart/form-data">
+      @method('PUT')
+      @csrf
             <div class="mb-3 form-check">
                 <label for="nomeInput" class="form-label">Nome:</label>
                 <input type="text" name="nomefilme" value="{{$dadosfilme->nomefilme}}" class="form-control" id="nomeInput" >
@@ -16,22 +17,22 @@
 
             <div class="mb-3 form-check">
                 <label for="AtorInput" class="form-label">Atores:</label>
-                <input type="text" name="atoresfilme" class="form-control" id="atorInput">
+                <input type="text" name="atoresfilme" value="{{$dadosfilme->atoresfilme}}" class="form-control" id="atorInput">
             </div>
 
             <div class="mb-3 form-check">
                 <label for="datalancamentoInput" class="form-label">Data lançamento:</label>
-                <input type="date" name="datalancamentofilme"class="form-control" id="datalancamentoInput" >
+                <input type="date" name="datalancamentofilme" value="{{$dadosfilme->datalancamentofilme}}" class="form-control" id="datalancamentoInput" >
             </div>
             
             <div class="mb-3 form-check">
                 <label for="sinopseInput" class="form-label">Sinopse:</label>
-                <input type="text" name="sinopsefilme" class="form-control" id="sinopseInput">
+                <input type="text" name="sinopsefilme" value="{{$dadosfilme->sinopsefilme}}" class="form-control" id="sinopseInput">
             </div>
 
             <div class="mb-3 form-check">
                 <label for="capaInput" class="form-label">Capa:</label>
-                <input type="text" name="capafilme"class="form-control" id="capaInput">
+                <input class="form-control" name="capa" value="{{$dadosfilme->capafilme}}" type="file" id="capaInput">
             </div>
 
            
