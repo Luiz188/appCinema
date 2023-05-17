@@ -63,17 +63,18 @@ class filmeController extends Controller
         return view('xxx',['registrosFilme'=>$registrosFilme]);
     }
 
-    public function AlterarBancoFilme(Filme $registrosFilme, Request $request){
-        $dadosfilme = $request->validate([
-            'nomefilme' => 'string|required',
-            'atoresfilme'=> 'string|required',
-            'dtlancamentofilme' => 'string|required',
-            'sinopsefilme' => 'string|required',
-            'capafilme' => 'file|required',
+    public function AlterarBancoFilme(Filme  $registrosFilmes, Request $request){
+        $dadosfilmes = $request->validate([
+            'nomefilme'=> 'string|required',
+                'atoresfilme'=> 'string|required',
+                'datalancamentofilme'=> 'date|required',
+                'sinopsefilme'=> 'string|required',
+                'capafilme'=> 'string|required'
         ]);
-        $registrosFilme->fill($dadosfilme);
-        $registrosFilme->save();
 
-       return Redirect::route('gerenciar-filme');
-       }
+        $registrosFilmes->fill($dadosfilmes);
+        $registrosFilmes->save();
+
+        return Redirect::route('gerenciar-filme');
+    }
 }
