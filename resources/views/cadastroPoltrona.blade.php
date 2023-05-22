@@ -15,7 +15,6 @@ button
 }
 </style>
 
-
 <!-- Modal -->
 @include('modal.poltronaCadastro')
 
