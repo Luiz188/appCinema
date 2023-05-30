@@ -7,10 +7,12 @@
   justify-content: center;
   align-items: center;
 }
+
 form
 {
   margin:3px;
 }
+
 .btn-primary
 {
   font-size:0.9rem;
@@ -18,7 +20,7 @@ form
 </style>
 
 <div class="container">
-
+  
 @for ($i = 1; $i <= 70; $i++)
 <form method = "post" action="{{route('cadastro-poltrona')}}">
 @csrf

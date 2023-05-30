@@ -1,6 +1,7 @@
 @extends('padrao')
 
 @section('content')
+
 <form class="row g-3">
     <div class="col-md-6">
       <label for="inputSala" class="form-label">Sala</label>
@@ -45,4 +46,6 @@
       <button type="submit" class="btn btn-primary">Sign in</button>
     </div>
   </form>
-@endsection
+
+
+@endsection 

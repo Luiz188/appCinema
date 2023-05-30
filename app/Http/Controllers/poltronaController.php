@@ -13,7 +13,7 @@ class poltronaController extends Controller
     public function buscarCadastroPoltrona(){
         return View('cadastroPoltrona');
     }
-
+    
 
     public function cadastrarPoltrona(Request $request){
         $dadospoltronas = $request->validate(
@@ -34,29 +34,30 @@ class poltronaController extends Controller
        // dd($dadosfuncionarios);
 
         $dadospoltronas = Poltrona::query();
-        $dadospoltronas->when($request->clie,function($query,$nomecliente ){
-            $query->where('nomeclie','like','%'.$nomecliente.'%');
+        $dadospoltronas->when($request->nomeclie, function($query,$nomeclie ){
+            $query->where('nomeclie','like', '%'.$nomeclie.'%');
         }); 
 
         $dadospoltronas = $dadospoltronas->get();
-
+        
 //ALTERAR ISSO. (Feito).
         return view('gerenciadorPoltrona',['dadospoltrona'=>$dadospoltronas]);
-
+        
     }
 
 
 
     public function ApagarPoltrona(Poltrona $registrosPoltronas){
         $registrosPoltronas->delete();
-
+    
            return Redirect::route('gerenciar-poltrona');
         }
 
 
         public function MostrarRegistrosPoltrona(Poltrona $registrosPoltronas){
             return view('xxxx',['registrosPoltronas'=>$registrosPoltronas]);
-
+    
+            
         }
 
 
@@ -66,19 +67,13 @@ class poltronaController extends Controller
                 'nomeclie' => 'string|required'
 
             ]);
-
+            
         $registrosPoltronas->fill($dadospoltronas);
         $registrosPoltronas->save();
 
         //Isso terá que ser arrumado depois, quando criar uma route no web.
         return Redirect::route('gerenciar-poltrona');
-
-
 }
-
-
-
-
 
 }
 ?>

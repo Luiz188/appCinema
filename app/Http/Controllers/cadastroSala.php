@@ -9,4 +9,5 @@ class cadastroSala extends Controller
     public function buscaCadastroSala(){
         return View('cadastroSala');
     }
+    
 }

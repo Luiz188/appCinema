@@ -26,17 +26,17 @@
   <tbody>
 
 
-
+     
     @if(empty($_GET['numpol']))
-
+   
     @else
-
+    
     @foreach($dadospoltrona as $dadospoltronas)
+    
 
-
-
+    
     <tr>
-
+    
       <th scope="row">{{$dadospoltronas->id}}</th>
       <td>{{$dadospoltronas->nomeclie}}</td>
       <td>{{$dadospoltronas->numpol}}</td>
@@ -45,7 +45,7 @@
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlterarPol-{{$dadospoltronas->id}}">Alterar</button>
       @include('modal.poltronaAlterar')
       </td>
-
+        
       <td>
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeletePol-{{$dadospoltronas->id}}">Excluir</button>
         @include('modal.poltronaDeletar')
@@ -53,7 +53,7 @@
 
     </tr>
 
-
+    
 
 <!-- Modal -->
 

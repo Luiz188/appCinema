@@ -19,13 +19,13 @@
                 <label for="emailInput" class="form-label">Número da poltrona</label>
                 <input type="text" name="numpol" class="form-control" value="{{$dadospoltronas->numpol}}" id="polInput">
             </div>
-
+           
             <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
 
-
-
-
+      
+    
+    
     </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

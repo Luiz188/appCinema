@@ -9,11 +9,13 @@
   text-align:center;
   margin-top:10%;
 }
+
 button
 {
   margin:4px;
 }
 </style>
+  
 
 <!-- Modal -->
 @include('modal.poltronaCadastro')
